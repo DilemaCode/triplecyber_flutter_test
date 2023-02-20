@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+// ignore: must_be_immutable
 class NumbersCard extends StatelessWidget {
   double? width;
   String text;
@@ -22,7 +23,7 @@ class NumbersCard extends StatelessWidget {
       ),
       child: Text(
         text,
-        style: TextStyle(fontSize: 16),
+        style: const TextStyle(fontSize: 16),
       ),
     );
   }

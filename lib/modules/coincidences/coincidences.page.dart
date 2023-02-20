@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:triplecyber_test/global/widgets/numbers.card.dart';
 import 'package:triplecyber_test/global/widgets/subtitle.dart';

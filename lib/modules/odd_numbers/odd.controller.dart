@@ -7,11 +7,6 @@ class OddController extends GetxController
     with GetSingleTickerProviderStateMixin {
   List<int> oddList = [];
   TextEditingController textController = TextEditingController(text: '9');
-  @override
-  void onInit() {
-    // TODO: implement onInit
-    super.onInit();
-  }
 
   void getOddRandomNumber() {
     oddList = [];
@@ -25,9 +20,4 @@ class OddController extends GetxController
     update();
   }
 
-  @override
-  void onClose() {
-    // TODO: implement onClose
-    super.onClose();
-  }
 }

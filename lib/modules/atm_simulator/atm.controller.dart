@@ -7,11 +7,6 @@ class AtmController extends GetxController
   TextEditingController textController = TextEditingController(text: '100');
   bool isLoading = false;
 
-  @override
-  void onInit() {
-    // TODO: implement onInit
-    super.onInit();
-  }
 
   void calculateBills() {
     int amout = int.parse(textController.text);
@@ -43,7 +38,7 @@ class AtmController extends GetxController
   callLoading()async{
     isLoading=true;
     update();
-    await Future.delayed(Duration(seconds: 5));
+    await Future.delayed(const Duration(seconds: 5));
     clearAll();
   }
 
@@ -53,9 +48,4 @@ class AtmController extends GetxController
     update();
   }
 
-  @override
-  void onClose() {
-    // TODO: implement onClose
-    super.onClose();
-  }
 }

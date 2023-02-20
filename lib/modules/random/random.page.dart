@@ -29,14 +29,14 @@ class RandomPage extends StatelessWidget {
                       controller.randomList.length,
                       (i) => Container(
                         width: (Get.width / 2) - 16,
-                        padding: EdgeInsets.all(12),
+                        padding: const EdgeInsets.all(12),
                         decoration: BoxDecoration(
-                          color: Color(0xff22242b),
+                          color: const Color(0xff22242b),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Text(
                           '${controller.randomList[i]}',
-                          style: TextStyle(fontSize: 16),
+                          style: const TextStyle(fontSize: 16),
                         ),
                       ),
                     ),
@@ -48,7 +48,7 @@ class RandomPage extends StatelessWidget {
                     child: Text('Introduzca un valor'),
                   ),
                 ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

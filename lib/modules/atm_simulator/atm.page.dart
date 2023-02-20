@@ -57,7 +57,7 @@ class AtmPage extends StatelessWidget {
                             child: Text('Introduzca un valor'),
                           ),
                         ),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       if (controller.bills.isEmpty)
                         Row(
                           children: [

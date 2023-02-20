@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class SubTilte extends StatelessWidget {
   String text;
   SubTilte({required this.text, super.key});

@@ -1,9 +1,10 @@
+// ignore_for_file: no_leading_underscores_for_local_identifiers
+
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:triplecyber_test/global/controllers/global.controller.dart';
 import 'package:triplecyber_test/modules/movies/data/models/movie.response.model.dart';
 import 'package:triplecyber_test/modules/movies/data/models/movie.model.dart';
 import 'package:triplecyber_test/modules/movies/data/repository/movies.repository.dart';
@@ -67,6 +68,11 @@ class MoviesController extends GetxController
       if (favoriteMovies.contains(movie.id)) {
         movie.isFavorite = true;
         movies[i] = movie;
+      } else {
+        if (movie.isFavorite!) {
+          movie.isFavorite = false;
+          movies[i] = movie;
+        }
       }
     }
   }
@@ -80,18 +86,15 @@ class MoviesController extends GetxController
 
   removeFromFavorites(int id) {
     favoriteMovies.remove(id);
+
+    update();
     saveFavorites();
+    setFavorites();
     update();
   }
 
   updateState(MoviesState _state) {
     state = _state;
     update();
-  }
-
-  @override
-  void onClose() {
-    // TODO: implement onClose
-    super.onClose();
   }
 }

@@ -30,9 +30,4 @@ class RandomController extends GetxController {
     update();
   }
 
-  @override
-  void onClose() {
-    // TODO: implement onClose
-    super.onClose();
-  }
 }

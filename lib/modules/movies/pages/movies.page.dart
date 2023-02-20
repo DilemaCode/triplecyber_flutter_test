@@ -18,7 +18,7 @@ class MoviesPage extends StatelessWidget {
             actions: [
               IconButton(
                 onPressed: controller.filterAction,
-                icon: Icon(Icons.filter_alt_rounded),
+                icon: const Icon(Icons.filter_alt_rounded),
                 color: controller.showOnlyFavorites ? Colors.blue : Colors.grey,
               )
             ],

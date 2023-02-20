@@ -100,19 +100,19 @@ class HomeWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Icon(icon, size: 45),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Text(
                   label,
                   style: const TextStyle(fontSize: 17),
                 ),
               ],
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: const [

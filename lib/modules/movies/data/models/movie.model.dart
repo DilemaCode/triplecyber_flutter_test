@@ -22,7 +22,6 @@ class MovieModel {
   });
 
   MovieModel.fromJson(Map<String, dynamic> json) {
-    // json =json['data'];
     id = json['id'];
     overview = json['overview'];
     posterPath = json['poster_path'];

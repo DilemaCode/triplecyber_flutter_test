@@ -42,7 +42,7 @@ class OddPage extends StatelessWidget {
                     child: Text('Introduzca un valor'),
                   ),
                 ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Row(
                 children: [
                   Expanded(

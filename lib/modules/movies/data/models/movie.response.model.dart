@@ -11,12 +11,8 @@ class MovieResModel {
   });
 
   MovieResModel.fromJson(Map<String, dynamic> json) {
-    try {
     page = json['page'];
     results = movieModelFromJsonList(json['results']);
-    } catch (e) {
-      print(e);
-    }
   }
 }
 

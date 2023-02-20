@@ -39,9 +39,4 @@ class CoincidencesController extends GetxController
     return fibonacci;
   }
 
-  @override
-  void onClose() {
-    // TODO: implement onClose
-    super.onClose();
-  }
 }

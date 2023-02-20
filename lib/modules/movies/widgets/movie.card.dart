@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:triplecyber_test/global/widgets/subtitle.dart';
-import 'package:triplecyber_test/modules/movies/controller/movies.controller.dart';
 import 'package:triplecyber_test/modules/movies/data/models/movie.model.dart';
 
+// ignore: must_be_immutable
 class MovieCard extends StatelessWidget {
   MovieCard({super.key, required this.movie});
   MovieModel movie;
@@ -51,7 +51,7 @@ class MovieCard extends StatelessWidget {
                             color: Colors.amber,
                           )
                         : const Icon(Icons.star_border),
-                    SizedBox(height: 5),
+                    const SizedBox(height: 5),
                     Text('${movie.voteAverage}/10'),
                   ],
                 ),

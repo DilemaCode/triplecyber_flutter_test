@@ -21,7 +21,7 @@ class AppPages {
     ),
     GetPage(
       name: AppRoutes.RandomNumbers,
-      page: () => RandomPage(),
+      page: () => const RandomPage(),
       binding: BindingsBuilder(
         () => Get.put<RandomController>(RandomController()),
       ),
@@ -56,7 +56,7 @@ class AppPages {
     ),
     GetPage(
       name: AppRoutes.MoviesDetail,
-      page: () =>  MoviesDetailPage(),
+      page: () =>  const MoviesDetailPage(),
     ),
   ];
 }

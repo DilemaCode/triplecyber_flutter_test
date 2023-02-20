@@ -38,6 +38,7 @@ class _MoviesDetailPageState extends State<MoviesDetailPage> {
               height: Get.height * .3,
               alignment: Alignment.bottomCenter,
               decoration: BoxDecoration(
+                color: Colors.grey,
                 image: DecorationImage(
                   image:
                       NetworkImage('${AppConfig.IMAGE_URL}${movie.posterPath}'),
@@ -59,19 +60,24 @@ class _MoviesDetailPageState extends State<MoviesDetailPage> {
                       Expanded(
                         child: Text(
                           movie.title!,
-                          style: TextStyle(fontSize: 24),
+                          style: const TextStyle(fontSize: 24),
                         ),
                       ),
-                      SizedBox(width: 20),
+                      const SizedBox(width: 20),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
                           InkWell(
                             onTap: () {
-                              MoviesController.instance
-                                  .addToFavorites(movie.id!);
+                              if (!isFavorite) {
+                                MoviesController.instance
+                                    .addToFavorites(movie.id!);
+                              }else{
+                                MoviesController.instance
+                                    .removeFromFavorites(movie.id!);
+                              }
                               setState(() {
-                                isFavorite = movie.isFavorite!;
+                                isFavorite = !isFavorite;
                               });
                             },
                             child: isFavorite
@@ -85,13 +91,13 @@ class _MoviesDetailPageState extends State<MoviesDetailPage> {
                                     size: 30,
                                   ),
                           ),
-                          SizedBox(height: 5),
+                          const SizedBox(height: 5),
                           Text('${movie.voteAverage}/10'),
                         ],
                       ),
                     ],
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Text(
                     movie.overview!,
                   ),
