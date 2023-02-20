@@ -9,17 +9,17 @@ final ThemeData appTheme = ThemeData(
     elevation: 0,
   ),
   colorScheme: const ColorScheme.dark().copyWith(
-    primary: const Color(0xff393b48),
+    primary: Colors.blue,
     background: const Color(0xff393b48),
   ),
   inputDecorationTheme: const InputDecorationTheme(
-    focusColor: Color.fromARGB(255, 214, 255, 167),
+    focusColor: Colors.blue,
     labelStyle: TextStyle(color: Colors.white),
     focusedBorder: OutlineInputBorder(
-      borderSide: BorderSide(color: Color.fromARGB(255, 214, 255, 167)),
+      borderSide: BorderSide(color: Colors.blue),
     ),
     enabledBorder: OutlineInputBorder(
-      borderSide: BorderSide(color: Color.fromARGB(255, 214, 255, 167)),
+      borderSide: BorderSide(color: Colors.blue),
     ),
   ),
 );

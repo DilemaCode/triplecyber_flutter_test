@@ -31,7 +31,7 @@ class MovieCard extends StatelessWidget {
               word,
               style: TextStyle(
                 fontSize: 22,
-                color: Get.theme.colorScheme.primary,
+                color: Get.theme.backgroundColor,
                 fontWeight: FontWeight.w900,
               ),
             ),

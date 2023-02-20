@@ -43,27 +43,33 @@ class OddPage extends StatelessWidget {
                   ),
                 ),
               const SizedBox(height: 20),
-              Row(
-                children: [
-                  Expanded(
-                    child: TextFormField(
-                      onFieldSubmitted: (value) =>
-                          controller.getOddRandomNumber(),
-                      keyboardType: TextInputType.number,
-                      inputFormatters: <TextInputFormatter>[
-                        FilteringTextInputFormatter.allow(
-                            RegExp(r'^(100|[1-9][0-9]|[1-9])$')),
-                        FilteringTextInputFormatter.digitsOnly,
-                      ],
-                      controller: controller.textController,
-                      decoration: const InputDecoration(
-                          label: Text('Cantidad de numeros')),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: TextFormField(
+                        onFieldSubmitted: (value) =>
+                            controller.getOddRandomNumber(),
+                        keyboardType: TextInputType.number,
+                        inputFormatters: <TextInputFormatter>[
+                          FilteringTextInputFormatter.allow(
+                              RegExp(r'^(100|[1-9][0-9]|[1-9])$')),
+                          FilteringTextInputFormatter.digitsOnly,
+                        ],
+                        controller: controller.textController,
+                        decoration: const InputDecoration(
+                            label: Text('Cantidad de numeros')),
+                      ),
                     ),
-                  ),
-                  MaterialButton(
+                    IconButton(
                       onPressed: controller.getOddRandomNumber,
-                      child: const Icon(Icons.arrow_forward)),
-                ],
+                      icon: const Icon(Icons.arrow_forward),
+                    ),
+                  ],
+                ),
               ),
               const SizedBox(height: 20),
             ],

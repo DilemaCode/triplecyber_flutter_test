@@ -8,7 +8,7 @@ import 'package:triplecyber_test/routes/app.routes.dart';
 import 'package:triplecyber_test/theme/app.theme.dart';
 
 void main()async {
-  await dotenv.load(fileName: ".env");
+  await dotenv.load(fileName: "assets/.env");
   runApp(
     GetMaterialApp(
       debugShowCheckedModeBanner: false,

@@ -59,28 +59,34 @@ class AtmPage extends StatelessWidget {
                         ),
                       const SizedBox(height: 20),
                       if (controller.bills.isEmpty)
-                        Row(
-                          children: [
-                            Expanded(
-                              child: TextFormField(
-                                onFieldSubmitted: (value) =>
-                                    controller.calculateBills(),
-                                keyboardType: TextInputType.number,
-                                inputFormatters: <TextInputFormatter>[
-                                  FilteringTextInputFormatter.deny(
-                                      RegExp('^0+')),
-                                  FilteringTextInputFormatter.digitsOnly,
-                                ],
-                                controller: controller.textController,
-                                decoration: const InputDecoration(
-                                    label: Text('Cantidad a retirar'),
-                                    prefix: Text('RD\$')),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 16, vertical: 10),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Expanded(
+                                child: TextFormField(
+                                  onFieldSubmitted: (value) =>
+                                      controller.calculateBills(),
+                                  keyboardType: TextInputType.number,
+                                  inputFormatters: <TextInputFormatter>[
+                                    FilteringTextInputFormatter.deny(
+                                        RegExp('^0+')),
+                                    FilteringTextInputFormatter.digitsOnly,
+                                  ],
+                                  controller: controller.textController,
+                                  decoration: const InputDecoration(
+                                      label: Text('Cantidad a retirar'),
+                                      prefix: Text('RD\$')),
+                                ),
                               ),
-                            ),
-                            MaterialButton(
+                              IconButton(
                                 onPressed: controller.calculateBills,
-                                child: const Icon(Icons.arrow_forward)),
-                          ],
+                                icon: const Icon(Icons.arrow_forward),
+                              ),
+                            ],
+                          ),
                         ),
                       const SizedBox(height: 20),
                     ],
